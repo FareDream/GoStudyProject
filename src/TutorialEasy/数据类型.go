@@ -1,8 +1,8 @@
-package main
+package TutorialEasy
 
 import "fmt"
 
-func dataType() {
+func DataType() {
 	var a bool = true // 布尔型
 	var b int = 1     //整型
 	var b1 int8 = 1   // 有符号 8 位整型 (-128 到 127)
