@@ -1,11 +1,10 @@
 package main
 
-import (
-	"GoStudyProject/src/TutorialEasy"
-)
+import "GoStudyProject/src/PDF"
 
 func main() {
 	//TutorialEasy.DataType()
 	//TutorialEasy.TestIota()
-	TutorialEasy.ConditionSwitch()
+	//TutorialEasy.ConditionSwitch()
+	PDF.ReadPDFandPage()
 }
