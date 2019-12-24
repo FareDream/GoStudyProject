@@ -1,6 +1,11 @@
 package TutorialEasy
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"sync"
+	"time"
+)
 
 func FunctionTest() {
 	//func function_name( [parameter list] ) [return_types] {
@@ -67,4 +72,32 @@ func FunctionTest1() {
 		fmt.Printf("我是回调，x：%d\n", x)
 		return x
 	})
+}
+
+//defer 适用于函数结束后的处理，例如文件流的关闭
+//defer 执行顺序为倒叙
+var mu sync.Mutex
+
+func lock() {
+	mu.Lock()
+	log.Printf("lock")
+}
+
+func unlock() {
+	mu.Unlock()
+	log.Printf("unlock")
+}
+
+func Foo() int {
+	lock()
+
+	func() {
+		log.Printf("entry inner")
+		defer unlock()
+		log.Printf("exit inner")
+	}()
+
+	time.Sleep(1 * time.Second)
+	log.Printf("return")
+	return 0
 }
