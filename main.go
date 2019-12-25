@@ -1,10 +1,9 @@
 package main
 
-import "GoStudyProject/src/PDF"
+import "GoStudyProject/src/HeavyBrush"
 
 func main() {
-	//TutorialEasy.DataType()
-	//TutorialEasy.TestIota()
-	//TutorialEasy.ConditionSwitch()
-	PDF.ReadPDFandPage()
+
+	HeavyBrush.ChannelsTest()
+
 }
