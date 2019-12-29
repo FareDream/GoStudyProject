@@ -1,9 +1,10 @@
 package main
 
-import "GoStudyProject/src/HeavyBrush"
+import (
+	"GoStudyProject/src/HeavyBrush"
+)
 
 func main() {
-
-	HeavyBrush.ChannelsTest()
-
+	sem := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+	HeavyBrush.Serve(sem)
 }
